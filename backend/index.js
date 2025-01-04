@@ -10,7 +10,9 @@ dotenv.config();
 const corsoption = {
     credentials: true,
     origin: "https://google-auth-snowy.vercel.app",
-    methods: "GET,PUT,PATCH,DELETE,POST,HEAD",
+    methods: ["GET,PUT,PATCH,DELETE,POST,HEAD"],
+   // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], 
   };
 const app=express();
 
