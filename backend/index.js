@@ -31,7 +31,9 @@ const server = app.listen(PORT, () => {
   connectDB();
 });
 // ... existing code ...
-
+app.get("/",(req,res)=>{
+    res.send("backend started")
+})
 app.use("/api/auth",AuthRoutes)
 
 //Rg4weqA2m3GmI2e7
