@@ -20,6 +20,7 @@ const corsoption = {
 const port=process.env.PORT || 5000
 
 app.use(cors(corsoption))
+app.options("*", cors(corsoption));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())
